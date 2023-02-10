@@ -1,0 +1,288 @@
+
+body{
+    background-image: url(https://media.tenor.com/hBk9UVIl6KgAAAAC/pink-stars-rise-up.gif);
+    background-size: cover;
+    
+}
+
+.rowOne{
+    height:25%; 
+    width: 100%;
+    margin: 12px;
+     display: flex;
+     justify-content: space-between;}
+   
+
+     .block{
+        width: 100%;
+        }
+
+          .gifContainer{
+            height: 125vh;}
+
+            .pic1
+            {
+                
+                width: 90%;
+                height: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                 
+            }
+            .pic2
+            {
+                
+                width: 90%;
+                height: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                 
+            }
+
+            .pic3
+            {
+                
+                width: 90%;
+                height: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                 
+            }
+
+            .pic4
+            {
+                
+                width: 90%;
+                height: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                 
+            }
+
+
+
+
+/* Rotate */
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+
+  .gifContainer {
+    width: 100%;
+    height: 100%;
+    animation-duration: 5s;
+    animation-name: rotate;
+    animation-play-state: running;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  } 
+
+  /* bounce */
+
+  @keyframes bounce {
+    0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-100px); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-7px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+}
+
+
+
+
+  .pic2 {
+    
+    animation-duration: 5s;
+    animation-name: bounce;
+    
+    animation-direction: alternate-reverse;
+    
+  } 
+
+  .pic4 {
+    
+    animation-duration: 5s;
+    animation-name: bounce;
+    
+    animation-direction: alternate-reverse;
+    
+  } 
+
+ 
+ /* falling*/
+
+ @keyframes fs-move {
+    0% { transform: rotateZ(0deg); }
+    25% { transform: rotateZ(-2.5deg); }
+    60% { transform: rotateZ(3deg); }
+    100% { transform: rotateZ(0deg); }
+ }
+
+.btn{
+    
+    color: rgb(180, 20, 220);
+    margin: auto;
+    animation-name: fs-move;
+    animation: fs-move 1s ease-in infinite;}
+    
+
+
+
+    
+ /* moving background behind text*/
+@keyframes animatedOne {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+
+
+.wrapperthree {
+    background-color: #cc34b8;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: url(https://media2.giphy.com/media/b83JK8QwtLzxu/200w.gif?cid=6c09b952mpipoq9qsid1zn1ncv2c7bs7ubbptm59nlndzefh&rid=200w.gif&ct=g);
+    margin: 1.5rem;
+    font-size: 7rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #a519e691;
+   animation: animatedOne 10s linear infinite;
+    margin: auto;
+    justify-content: center;
+}
+
+/* Dropp letters */
+
+
+.drop-main {
+    display: flex;
+    font-size: 7rem;
+    margin: 1.5rem;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.h {
+    opacity: 0;
+    animation: drop 0.4s linear forwards;
+    color: silver;
+}
+.e {
+    opacity: 0;
+    animation: drop 0.4s linear forwards 0.2s;
+    color: silver;
+}
+.l {
+    opacity: 0;
+    animation: drop 0.4s linear forwards 0.4s;
+    color: silver;
+}
+.l {
+    opacity: 0;
+    animation: drop 0.4s linear forwards 0.6s;
+    color: silver;
+}
+.o {
+    opacity: 0;
+    animation: drop 0.4s linear forwards 0.8s;
+    color: silver;
+}
+
+@keyframes drop {
+    0% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    65% {
+        transform: translateY(-17px);
+        opacity: 1;
+    }
+    75% {
+        transform: translateY(-22px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes runLeft {
+    0%{
+        margin-left:0%;
+    }
+    10%{
+        margin-top:40%;
+    }
+    20%{
+        margin-top:0%;
+
+    }
+    50%{
+        margin-left:100%;
+        
+    }
+    100%{
+        margin-left:0%;
+    }
+  }
+.star{
+    border:solid purple;
+    height:90px;
+    width:90px;
+    border-radius:50%;
+    background-color:purple;
+    animation: runLeft 10s ease-in infinite;
+    position:absolute;
+  }
+
+  .cursor{
+    z-index: 999;
+    position: fixed;
+    background: #2696E8;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 20px #2696E8,
+                0 0 60px #2696E8,
+                0 0 100px #2696E8;
+    animation: colors 5s infinite;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+  
+  @keyframes colors{
+    0%{
+      filter: hue-rotate(0deg);
+    }
+    100%{
+      filter: hue-rotate(360deg);
+    }
+  }
+  
+  .cursor:before{
+    content: '';
+    position: absolute;
+    background: #e82626;
+    width: 50px;
+    height: 50px;
+    opacity: 0.2;
+    transform: translate(-30%, -30%);
+    border-radius: 50%;
+  }
